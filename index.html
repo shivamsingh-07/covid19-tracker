@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Corona Virus</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
+            rel="stylesheet"
+        />
+        <script src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div id="particles-js"></div>
+            <i class="fas fa-bars menu" onclick="toggle()"></i>
+            <header id="menubar">
+                <ul>
+                    <a href="#origin"><li>Origin</li></a>
+                    <a href="#symptoms"><li>Symptoms</li></a>
+                    <a href="#precautions"><li>Precautions</li></a>
+                    <a href="#counter"><li>Data</li></a>
+                </ul>
+            </header>
+            <div class="home">
+                <img src="img/logo2.png" alt="" />
+                <br />
+                <br />
+                <br />
+                <a href="#origin">
+                    <span>Learn More</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Origin Div -->
+        <div id="origin">
+            <div class="content">
+                <div class="left"><img src="img/virus.png" width="300px" /></div>
+                <div class="right">
+                    <h1>Origin</h1>
+                    <br />
+                    <p>
+                        Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered
+                        coronavirus. The COVID-19 virus spreads primarily through droplets of saliva or
+                        discharge from the nose when an infected person coughs or sneezes, so it’s important
+                        that you also practice respiratory etiquette. At this time, there are no specific
+                        vaccines or treatments for COVID-19. However, there are many ongoing clinical trials
+                        evaluating potential treatments.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Symptoms Div -->
+        <div id="symptoms">
+            <div class="content">
+                <div class="left">
+                    <h1>Symptoms</h1>
+                    <br />
+                    <p>
+                        Most people infected with the COVID-19 virus will experience mild to moderate
+                        respiratory illness and recover without requiring special treatment. Older people, and
+                        those with underlying medical problems like cardiovascular disease, diabetes, chronic
+                        respiratory disease, and cancer are more likely to develop serious illness.
+                    </p>
+                </div>
+                <div class="right"><img src="img/symptoms.png" width="300px" /></div>
+            </div>
+        </div>
+
+        <!-- Precautions Div -->
+        <div id="precautions">
+            <div class="content">
+                <div class="left"><img src="img/Precautions.png" width="300px" /></div>
+                <div class="right">
+                    <h1>Precautions</h1>
+                    <br />
+                    <p>The best way to prevent and slow down transmission are :</p>
+                    <br />
+                    <ol type="1">
+                        <li>Wash your hands or using an alcohol based rub frequently.</li>
+                        <li>Do not touch your face.</li>
+                        <li>Cough into a flexed elbow.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disease Counter -->
+        <div id="counter">
+            <h1>Worldwide Data</h1>
+            <br />
+            <br />
+            <i class="fas fa-spinner fa-3x fa-spin" id="wait"></i>
+            <table>
+                <tbody id="body"></tbody>
+            </table>
+        </div>
+
+        <!-- Aarogya App -->
+        <div class="app">
+            <div class="event-item">
+                <img src="https://www.mygov.in/sites/all/themes/mygov/images/ar_app.png" />
+                <br />
+                <br />
+                <span>An app that speaks your language</span>
+                <div class="app_btn_area">
+                    <div class="app_btn">
+                        <a
+                            href="https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu"
+                            target="_blank"
+                            ><img
+                                src="https://www.mygov.in/sites/all/themes/mygov/images/gplay_icon.png"
+                                alt="Aarogya Setu for Android"
+                        /></a>
+                    </div>
+                    <br />
+                    <div class="app_btn">
+                        <a href="https://apps.apple.com/in/app/aarogyasetu/id1505825357 " target="_blank">
+                            <img
+                                src="https://www.mygov.in/sites/all/themes/mygov/images/app_store_icon.png"
+                                alt="Aarogya Setu for iOS"
+                        /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="event-item">
+                <img src="https://www.mygov.in/sites/all/themes/mygov/images/ar_qr.jpg" alt="qr code" />
+                <br />
+                <br />
+                <span>Available in 11 different languages</span>
+                <br />
+                <span>Scan to Download</span>
+                <br />
+                <span><b>Aarogya Setu</b></span>
+                <br />
+                <span>App for iOS and Android</span>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <span>Copyright &copy; 2020 | All Rights Reserved</span>
+        </footer>
+
+        <!-- Helpline toggle circle -->
+        <span class="circle" onclick="helpline()"><span>!</span></span>
+
+        <!-- Helpline Section -->
+        <section id="help">
+            <div class="numbers">
+                <h1>Download Helpline Number PDF</h1>
+                <br /><br />
+                <a href="helplinenumber.pdf" target="_blank">Download File</a>
+                <br />
+            </div>
+        </section>
+
+        <!-- Javascript Code -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+            integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(document).ready(start());
+
+            function toggle() {
+                var target = document.getElementById("menubar");
+                target.style.display = getComputedStyle(target).display == "none" ? "block" : "none";
+            }
+
+            function helpline() {
+                var target = document.getElementById("help");
+                target.style.display = getComputedStyle(target).display == "none" ? "block" : "none";
+            }
+        </script>
+        <script src="js/particles.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
